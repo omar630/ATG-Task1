@@ -18,9 +18,13 @@ Route::get('/', function () {
 Route::post('/submit','SubmitController@store');
 Route::get('/getall',function(){
 	$customers = Customer::all();
+	if(count($customers)==0)
+		echo"<strong>No data</strong>";
+	else{
 	foreach ($customers as $customer) {
-		echo $customer;
+		echo "<p><strong>Name:</strong>".$customer->name."<br><strong>Pincode:</strong>".$customer->pincode."</p><br><br>";
 	}
+}
 });
 
 Route::get('/redirecttohome',function(){
