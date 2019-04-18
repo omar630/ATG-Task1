@@ -20,7 +20,6 @@ class SubmitController extends Controller
 
     	$customers = Customer::where('name',$request->name)->where('pincode',$request->pincode)->get();
     	if(count($customers)==0){
-    	    //$messages = Customer::where('name',$request->name)->orderBy('id','desc')->get();
     	    $customer = new Customer;
     	    $request->validate(
     	    	['name' => 'required|regex:/^[a-zA-Z_ ]*$/',
