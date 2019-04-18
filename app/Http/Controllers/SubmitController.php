@@ -20,18 +20,18 @@ class SubmitController extends Controller
 
     	$customers = Customer::where('name',$request->name)->where('pincode',$request->pincode)->get();
     	if(count($customers)==0){
-    	//$messages = Customer::where('name',$request->name)->orderBy('id','desc')->get();
-    	$customer = new Customer;
-    	$request->validate(
-    		['name' => 'required|regex:/^[a-zA-Z_ ]*$/',
-    		'pincode' => 'required|digits:6|numeric',
-    	]);
+    	    //$messages = Customer::where('name',$request->name)->orderBy('id','desc')->get();
+    	    $customer = new Customer;
+    	    $request->validate(
+    	    	['name' => 'required|regex:/^[a-zA-Z_ ]*$/',
+    	    	'pincode' => 'required|digits:6|numeric',
+    	    ]);
 
-    	$customer->name = $request->name;
-    	$customer->pincode = $request->pincode;
-    	$customer->save();
-    	return view('success');
-    	//return view('home');
+    	    $customer->name = $request->name;
+    	    $customer->pincode = $request->pincode;
+    	    $customer->save();
+    	    return view('success');
+    	    //return view('home');
     	}
     	else{
     		return view('error');
