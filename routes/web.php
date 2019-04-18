@@ -21,10 +21,10 @@ Route::get('/getall',function(){
 	if(count($customers)==0)
 		echo"<strong>No data</strong>";
 	else{
-	foreach ($customers as $customer) {
-		echo "<p><strong>Name:</strong>".$customer->name."<br><strong>Pincode:</strong>".$customer->pincode."</p><br><br>";
+		foreach ($customers as $customer) {
+			echo "<p><strong>Name:</strong>".$customer->name."<br><strong>Pincode:</strong>".$customer->pincode."</p><br><br>";
+		}
 	}
-}
 });
 
 Route::get('/redirecttohome',function(){
