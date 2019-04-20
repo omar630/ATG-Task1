@@ -9,7 +9,8 @@
 <!-- if data is succesfully inserted in database this page is shown	-->
 	<div class="alert alert-success container">
 		<strong>submitted succesfuly</strong>
-		<form method="get" action="/redirecttohome">
+		<!-- use <?php if(strpos( $_SERVER['REQUEST_URI'],'/api/') !== false) echo "/api/form" ?> in action to differentiate api and non api urls--> 
+		<form method="get" action="redirecttohome">
 			<input type="submit" value="Enter Another data" class="col-xs-10 btn btn-primary">
 		</form>
 	</div>

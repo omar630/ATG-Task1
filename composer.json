@@ -9,9 +9,11 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "arcanedev/log-viewer": "^4.7",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "tymon/jwt-auth": "1.0.0-beta.3"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -58,5 +60,9 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+
+    },
+    "tymon/jwt-auth": "0.5.*",
+            "barryvdh/laravel-cors": "^0.8.2"
+        
 }

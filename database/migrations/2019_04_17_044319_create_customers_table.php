@@ -17,6 +17,7 @@ class CreateCustomersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('pincode');
+            $table->string('email');
             $table->timestamps();
         });
     }

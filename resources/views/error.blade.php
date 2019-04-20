@@ -9,7 +9,8 @@
 <!-- if data already exists in database this page is shown	-->
 	<div class="alert alert-danger container">
 		<strong>Data already Exists!.please Try again with different data</strong>
-		<form action="/redirecttohome">
+		<!-- use <?php if(strpos( $_SERVER['REQUEST_URI'],'/api/') !== false) echo "/api/form" ?> in action to differentiate api and non api urls--> 
+		<form action="redirecttohome" method="get">
 			<input type="submit" value="Try Again" class="col-xs-10 btn btn-primary">
 		</form>
 	</div>
