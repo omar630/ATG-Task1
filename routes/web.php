@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::post('/submit','SubmitController@store');
+Route::post('/submit','SubmitController@performAction');
 Route::get('/getall',function(){
 	$customers = Customer::all();
 	if(count($customers)==0){
