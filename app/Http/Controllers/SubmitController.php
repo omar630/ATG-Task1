@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;*/
 class SubmitController extends Controller
 {
-    /*
-        this function first validates the given feild values if it satisfies 
-        then check whether the given values exists in database if does not exists it insert into database else show an error
-    */
+	/*
+		this function first validates the given feild values if it satisfies 
+		then check whether the given values exists in database if does not exists it insert into database else show an error
+	*/
     use MainTrait;
     public function performAction(Request $request){
         $obj = new SubmitController();

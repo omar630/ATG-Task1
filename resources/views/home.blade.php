@@ -20,7 +20,7 @@
 
 		<div class="col-sm-10 form-group-lg">
 			<!-- use <?php if(strpos( $_SERVER['REQUEST_URI'],'/api/') !== false) echo "/api/form" ?> in action to differentiate api and non api urls--> 
-			<form  action=/api/submit method="post">
+			<form  action=<?php if(strpos( $_SERVER['REQUEST_URI'],'/api/') !== false) echo "/api" ?>/submit method="post">
 				<input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
 				<div class="form-group row">
 					<label>Enter Name:</label>

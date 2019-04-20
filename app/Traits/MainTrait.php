@@ -27,10 +27,15 @@ trait MainTrait{
 
             //log::info("User data stored with name:".$customer->name." email:".$customer->email);   
 
-            Mail::raw('Hi,'.$customer->name.' we have received your details name:'.$customer->name.' pincode:'.$customer->pincode, function($message) use ($customer) {
+            try{
+                Mail::raw('Hi,'.$customer->name.' we have received your details name:'.$customer->name.' pincode:'.$customer->pincode, function($message) use ($customer) {
                     $message->to($customer->email, $customer->name)->subject('ATG');
                     $message->from('7396omar@gmail.com','Mohammed Omar'); // $message->from(from,name(from));
                 });
+            }
+            catch(Exception $e){
+                log::error($e);
+            }
             if(Mail::failures()){
                 log::error("EMAIL Not Sent To ".$customer->email);
             }
