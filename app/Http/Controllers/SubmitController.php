@@ -15,11 +15,11 @@ class SubmitController extends Controller
     use MainTrait;
     public function performAction(Request $request){
         $obj = new SubmitController();
-        if($obj->store($request))
+        if($obj->store($request)){
             return view('success');
+        }
         else{
-                //log::debug('else block');
-                //return view('error');
+            //log::debug('else block');
             return view('error');
         }
    }

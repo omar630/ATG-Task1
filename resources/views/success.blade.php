@@ -10,7 +10,7 @@
 	<div class="alert alert-success container">
 		<strong>submitted succesfuly</strong>
 		<!-- use <?php if(strpos( $_SERVER['REQUEST_URI'],'/api/') !== false) echo "/api/form" ?> in action to differentiate api and non api urls--> 
-		<form method="get" action="redirecttohome">
+		<form method="get" action="redirecttohome" hidden="true">
 			<input type="submit" value="Enter Another data" class="col-xs-10 btn btn-primary">
 		</form>
 	</div>
